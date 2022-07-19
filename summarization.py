@@ -1,5 +1,8 @@
 import streamlit as st
 from transformers import pipeline
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 @st.cache(allow_output_mutation=True)
 def load_summarizer():
